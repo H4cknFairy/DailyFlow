@@ -26,4 +26,7 @@ It provides **task management, progress tracking, and visual motivation tools** 
 ---
 
 ## 📂 Project Structure  
+![Dashboard Screenshot]
+<img width="1352" height="911" alt="image" src="https://github.com/user-attachments/assets/44950fcc-f520-4ed3-bea3-a6460d582ed0" />
+<img width="1018" height="922" alt="image" src="https://github.com/user-attachments/assets/5504f5f5-e5ef-4d49-8f98-7b5881a5fafe" />
 
