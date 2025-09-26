@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DailyFlow</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📚 DailyFlow</h1>
+      <button id="dark-mode-toggle">🌙 Toggle Dark Mode</button>
+    </header>
+
+    <!-- AI Suggestions -->
+    <section class="ai-section">
+      <h3>🤖 AI Suggestion</h3>
+      <p id="ai-suggestion">Loading smart suggestions...</p>
+    </section>
+
+    <!-- Task Form -->
+    <form id="task-form">
+      <input type="text" id="task-input" placeholder="Enter task name" required>
+      <input type="text" id="subject-input" placeholder="Subject / Topic" required>
+      <select id="priority-input">
+        <option value="Very Important">Very Important</option>
+        <option value="Urgent">Urgent</option>
+        <option value="Optional">Optional</option>
+      </select>
+      <input type="date" id="deadline-input" required>
+      <button type="submit">➕ Add Task</button>
+    </form>
+
+    <!-- Task List -->
+    <h3>📝 Task List</h3>
+    <p id="empty-message">No tasks added yet.</p>
+    <table class="task-table">
+      <tbody id="task-list"></tbody>
+    </table>
+
+    <!-- Progress Tracking -->
+    <h3>📊 Progress</h3>
+    <button id="toggle-progress">🔽 Show / Hide Progress</button>
+    <div class="chart-container" id="progress-container">
+      <canvas id="tasks-chart"></canvas>
+      <div class="chart-center">
+        <p id="chart-percent">0%</p>
+        <small id="chart-count">0/0 Tasks</small>
+      </div>
+    </div>
+    <p id="streak-display">🔥 Streak: 0 days <span id="streak-badge"></span></p>
+
+    <!-- Calendar Heatmap -->
+    <h3>📆 Daily Tracker</h3>
+    <button id="toggle-calendar" class="collapse-btn">🔽 Show / Hide Tracker</button>
+    <div id="calendar-section" class="calendar-section">
+      <div class="calendar-header">
+        <button id="prev-month">⬅</button>
+        <h4 id="calendar-month">Month</h4>
+        <button id="next-month">➡</button>
+      </div>
+      <div class="calendar-days">
+        <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+      </div>
+      <div id="calendar-grid" class="calendar-grid"></div>
+    </div>
+    <div id="tooltip" class="tooltip"></div>
+
+    <!-- Pomodoro Timer -->
+    <h3>⏳ Pomodoro Timer</h3>
+    <p id="timer-display">25:00</p>
+    <button id="start-timer">▶ Start</button>
+    <button id="pause-timer">⏸ Pause</button>
+    <button id="reset-timer">🔄 Reset</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
